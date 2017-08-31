@@ -1,0 +1,13 @@
+<resources>
+
+    <dimen name="font_text_normal">14sp</dimen>
+
+    <dimen name="toolbar_title">18sp</dimen>
+
+    <dimen name="edittext_height">40dp</dimen>
+
+    <dimen name="list_title">16sp</dimen>
+    <dimen name="list_desc">12sp</dimen>
+    <dimen name="list_icon">48dp</dimen>
+
+</resources>

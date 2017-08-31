@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 蓝色 -->
+    <color name="blue_389dbd">#389dbd</color>
+    <color name="blue_1E88E5">#1E88E5</color> <!-- 600 -->
+    <color name="blue_1976D2">#1976D2</color> <!-- 700 -->
+    <color name="blue_1565c0">#1565c0</color> <!-- 800 -->
+
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- 黑色 -->
+    <color name="black">#333333</color>
+
+    <!-- 灰色 -->
+    <color name="gray_bg">#F2F2F2</color> <!-- 背景灰-->
+    <color name="gray_divider">#999999</color> <!-- 分割线 -->
+
+    <!-- 黄色 -->
+    <color name="yellow_FF4500">#FF4500</color>
+    <color name="yellow_FFCC00">#FFCC00</color>
+    <color name="yellow_FE8020">#FE8020</color>
+
+    <!-- 红色 -->
+    <color name="red_FF3030">#FF3030</color>
+    <color name="text_red">#FF0000</color>
+    <!-- tab -->
+
+
+
+</resources>
+
