@@ -38,7 +38,6 @@ public class MainActivity extends BaseActivity implements MainTabLayout.OnMainTa
     private static final int POSITION_PART_TIME_JOB = 1;
     private static final int POSITION_MINE = 2;
 
-    private LrchaoToolBar mToolBar;
     public MainTabLayout mMainTabLayout;
     private ViewPager mViewPager;
     private FragmentPagerAdapter mAdapter;
@@ -67,7 +66,6 @@ public class MainActivity extends BaseActivity implements MainTabLayout.OnMainTa
     protected void initView() {
         setSwipeBackEnable(false);
 
-        mToolBar = (LrchaoToolBar) findViewById(R.id.toolbar_lrchao);
         mMainTabLayout = (MainTabLayout) findViewById(R.id.main_tab_layout);
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
 
@@ -145,20 +143,6 @@ public class MainActivity extends BaseActivity implements MainTabLayout.OnMainTa
     @Override
     public void onMainTabItemClick(int position) {
         mViewPager.setCurrentItem(position);
-        switch (position) {
-            case POSITION_HOME:
-                mToolBar.setCenterTitleText(R.string.toolbar_home);
-                break;
-            case POSITION_PART_TIME_JOB:
-                mToolBar.setCenterTitleText(R.string.toolbar_part_time_job);
-                break;
-            case POSITION_MINE:
-                mToolBar.setCenterTitleText(R.string.toolbar_mine);
-                break;
-            default:
-                break;
-        }
-
     }
 
     @Override

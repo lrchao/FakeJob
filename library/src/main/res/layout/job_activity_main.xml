@@ -4,16 +4,7 @@
               android:layout_height="match_parent"
               android:background="@color/gray_bg"
               android:orientation="vertical"
-              xmlns:lrchaoBar="http://schemas.android.com/apk/res-auto">
-
-
-    <com.lrchao.views.toolbar.LrchaoToolBar
-        android:id="@+id/toolbar_lrchao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        lrchaoBar:background_color="@color/colorPrimary"
-        lrchaoBar:center_title_color="@color/white"
-        lrchaoBar:center_title_size="@dimen/toolbar_title"/>
+    >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/id_viewpager"

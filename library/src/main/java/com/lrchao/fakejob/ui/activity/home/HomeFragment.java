@@ -55,7 +55,7 @@ public class HomeFragment extends SwipeRefreshFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_home;
+        return R.layout.job_fragment_home;
     }
 
     @Override

@@ -38,7 +38,7 @@ public class LoadingDialogFragment extends MyBaseDialogFragment {
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.dialog_loading;
+        return R.layout.job_dialog_loading;
     }
 
     @Override

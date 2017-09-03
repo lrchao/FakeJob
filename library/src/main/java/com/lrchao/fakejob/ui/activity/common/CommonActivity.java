@@ -19,7 +19,7 @@ public abstract class CommonActivity extends BaseActivity {
 
     @Override
     protected final int getLayoutViewId() {
-        return R.layout.activity_common;
+        return R.layout.job_activity_common;
     }
 
     /**
