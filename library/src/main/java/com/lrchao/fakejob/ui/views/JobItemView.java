@@ -13,6 +13,7 @@ import com.lrchao.fakejob.R;
 import com.lrchao.fakejob.model.json.home.HomeJobModel;
 import com.lrchao.fakejob.utils.MyImageUtils;
 import com.lrchao.fakejob.utils.NavUtils;
+import com.lrchao.utils.LogUtils;
 
 
 /**
@@ -36,6 +37,8 @@ public class JobItemView extends LinearLayout implements View.OnClickListener {
 
     TextView mTvPriceUnit;
 
+    ImageView mIvMark;
+
     private HomeJobModel mModel;
 
     public JobItemView(Context context) {
@@ -57,6 +60,7 @@ public class JobItemView extends LinearLayout implements View.OnClickListener {
         mTvDate = findViewById(R.id.tv_date);
         mTvPrice = findViewById(R.id.tv_price);
         mTvPriceUnit = findViewById(R.id.tv_price_unit);
+        mIvMark = findViewById(R.id.iv_mark);
 
         setOnClickListener(this);
     }
@@ -82,6 +86,30 @@ public class JobItemView extends LinearLayout implements View.OnClickListener {
 
         mTvPriceUnit.setText(model.getPriceUnit());
 
+        LogUtils.e("id==" + model.getId());
+
+        String idStr = String.valueOf(model.getId());
+
+        char c = idStr.charAt(idStr.length() - 1);
+
+        int m = Integer.valueOf(String.valueOf(c));
+        if (m == 1) {
+
+            mIvMark.setBackgroundResource(R.drawable.clear_month);
+
+        } else if (m == 3) {
+
+            mIvMark.setBackgroundResource(R.drawable.clear_ohter);
+
+        } else if (m == 8) {
+
+            mIvMark.setBackgroundResource(R.drawable.clear_over);
+
+        } else if (m == 6) {
+
+            mIvMark.setBackgroundResource(R.drawable.clear_week);
+
+        }
 
     }
 
