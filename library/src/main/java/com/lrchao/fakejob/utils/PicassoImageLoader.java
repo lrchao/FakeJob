@@ -21,6 +21,8 @@ public class PicassoImageLoader extends ImageLoader {
 
         if (path instanceof String) {
             Picasso.with(context).load((String) path).placeholder(R.drawable.default_banner).into(imageView);
+        } else if (path instanceof Integer) {
+            Picasso.with(context).load((Integer) path).placeholder(R.drawable.default_banner).into(imageView);
         }
 
     }

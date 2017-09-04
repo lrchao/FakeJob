@@ -114,11 +114,12 @@ public class HomeFragment extends SwipeRefreshFragment implements
     @Override
     public void bindBannerView(final List<HomeBannerModel> bannerList) {
 
-        List<String> urlList = new ArrayList<>();
+        List<Integer> urlList = new ArrayList<>();
 
-        for (HomeBannerModel model : bannerList) {
-            urlList.add(model.getImg());
-        }
+        urlList.add(R.drawable.banner_1);
+        urlList.add(R.drawable.banner_2);
+        urlList.add(R.drawable.banner_3);
+
 
         //设置banner样式
         mBanner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
@@ -140,7 +141,7 @@ public class HomeFragment extends SwipeRefreshFragment implements
         mBanner.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {
-                NavUtils.get().navToJobDetails(getActivity(), bannerList.get(position).getId());
+                NavUtils.get().navToJobDetails(getActivity(), 3);
             }
         });
         mBanner.start();
