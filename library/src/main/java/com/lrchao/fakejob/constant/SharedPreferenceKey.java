@@ -17,6 +17,9 @@ public enum SharedPreferenceKey {
     //   Common
     //==========================================================================
 
+    PREF_CURRENT_LOCATION("pref.current.location", String.class, "北京"),
+
+
     /**
      * ACCESS TOKEN
      */

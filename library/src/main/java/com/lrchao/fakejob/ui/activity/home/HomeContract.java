@@ -21,9 +21,12 @@ public interface HomeContract {
         void bindBannerView(List<HomeBannerModel> bannerList);
 
         void bindJobListView(List<HomeJobModel> jobList);
+
+        void bindCurrentLocationView();
     }
 
 
     interface Presenter extends MvpRequestPagePresenter {
+        void navToLocation();
     }
 }

@@ -18,7 +18,7 @@
         <activity android:name=".ui.activity.login.LoginActivity"/>
         <activity android:name=".ui.activity.register.RegisterActivity" />
         <activity android:name=".ui.activity.favorites.MyFavoritesListActivity" />
-
+        <activity android:name=".ui.activity.location.LocationActivity" />
         <service
             android:name=".service.RequestService"
             android:exported="false"/>

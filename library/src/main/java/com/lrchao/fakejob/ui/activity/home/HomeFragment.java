@@ -2,8 +2,10 @@ package com.lrchao.fakejob.ui.activity.home;
 
 import android.support.annotation.DrawableRes;
 import android.view.View;
+import android.widget.TextView;
 
 import com.lrchao.fakejob.R;
+import com.lrchao.fakejob.manager.location.MyLocationManager;
 import com.lrchao.fakejob.model.json.home.HomeBannerModel;
 import com.lrchao.fakejob.model.json.home.HomeJobModel;
 import com.lrchao.fakejob.mvp.BasePresenter;
@@ -34,7 +36,7 @@ import java.util.List;
  */
 
 public class HomeFragment extends SwipeRefreshFragment implements
-        LrchaoGridAdapter.OnLrchaoItemClickListener, HomeContract.View {
+        LrchaoGridAdapter.OnLrchaoItemClickListener, HomeContract.View, View.OnClickListener {
 
     LrchaoGridLayout mGridLayout;
 
@@ -43,6 +45,8 @@ public class HomeFragment extends SwipeRefreshFragment implements
     ItemGroupLayout mGroupLayout;
 
     private HomePresenter mPresenter;
+
+    private TextView mTvLocation;
 
     public static HomeFragment getInstance() {
         return new HomeFragment();
@@ -60,6 +64,11 @@ public class HomeFragment extends SwipeRefreshFragment implements
 
     @Override
     protected void initView(View parentView) {
+
+        parentView.findViewById(R.id.iv_location).setOnClickListener(this);
+        mTvLocation = parentView.findViewById(R.id.tv_location);
+        mTvLocation.setOnClickListener(this);
+        bindCurrentLocationView();
 
         mGridLayout = parentView.findViewById(R.id.layout_category);
         mBanner = parentView.findViewById(R.id.banner);
@@ -148,5 +157,17 @@ public class HomeFragment extends SwipeRefreshFragment implements
 
         mGroupLayout.setBottomLineHeight(2);
         mGroupLayout.build();
+    }
+
+    @Override
+    public void bindCurrentLocationView() {
+        mTvLocation.setText(MyLocationManager.getInstance().getCurrentLocation());
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (R.id.iv_location == view.getId() || R.id.tv_location == view.getId()) {
+            mPresenter.navToLocation();
+        }
     }
 }

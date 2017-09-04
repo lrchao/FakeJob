@@ -12,6 +12,7 @@ import com.lrchao.fakejob.ui.activity.category.CategoryJobListActivity;
 import com.lrchao.fakejob.ui.activity.favorites.MyFavoritesListActivity;
 import com.lrchao.fakejob.ui.activity.job.JobDetailsActivity;
 import com.lrchao.fakejob.ui.activity.job.MyJobListActivity;
+import com.lrchao.fakejob.ui.activity.location.LocationActivity;
 import com.lrchao.fakejob.ui.activity.login.LoginActivity;
 import com.lrchao.fakejob.ui.activity.main.MainActivity;
 import com.lrchao.fakejob.ui.activity.register.RegisterActivity;
@@ -158,6 +159,12 @@ public final class NavUtils {
     public void navToMyFavoritesListActivity(Context context) {
         if (context != null) {
             startActivity(context, MyFavoritesListActivity.getCallingIntent(context));
+        }
+    }
+
+    public void navToLocation(Context context) {
+        if (context != null) {
+            startActivity(context, LocationActivity.getCallingIntent(context));
         }
     }
 
