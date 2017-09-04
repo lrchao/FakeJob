@@ -16,6 +16,7 @@ import com.lrchao.fakejob.ui.activity.location.LocationActivity;
 import com.lrchao.fakejob.ui.activity.login.LoginActivity;
 import com.lrchao.fakejob.ui.activity.main.MainActivity;
 import com.lrchao.fakejob.ui.activity.register.RegisterActivity;
+import com.lrchao.fakejob.ui.activity.search.SearchActivity;
 
 import java.util.HashMap;
 
@@ -165,6 +166,12 @@ public final class NavUtils {
     public void navToLocation(Context context) {
         if (context != null) {
             startActivity(context, LocationActivity.getCallingIntent(context));
+        }
+    }
+
+    public void navToSearch(Context context) {
+        if (context != null) {
+            startActivity(context, SearchActivity.getCallingIntent(context));
         }
     }
 

@@ -28,5 +28,7 @@ public interface HomeContract {
 
     interface Presenter extends MvpRequestPagePresenter {
         void navToLocation();
+
+        void navToSearch();
     }
 }

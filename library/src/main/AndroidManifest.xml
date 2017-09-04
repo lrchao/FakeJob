@@ -19,6 +19,7 @@
         <activity android:name=".ui.activity.register.RegisterActivity" />
         <activity android:name=".ui.activity.favorites.MyFavoritesListActivity" />
         <activity android:name=".ui.activity.location.LocationActivity" />
+        <activity android:name=".ui.activity.search.SearchActivity" />
         <service
             android:name=".service.RequestService"
             android:exported="false"/>

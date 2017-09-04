@@ -70,6 +70,8 @@ public class HomeFragment extends SwipeRefreshFragment implements
         mTvLocation.setOnClickListener(this);
         bindCurrentLocationView();
 
+        parentView.findViewById(R.id.ll_search).setOnClickListener(this);
+
         mGridLayout = parentView.findViewById(R.id.layout_category);
         mBanner = parentView.findViewById(R.id.banner);
         mGroupLayout = parentView.findViewById(R.id.layout_group);
@@ -168,6 +170,8 @@ public class HomeFragment extends SwipeRefreshFragment implements
     public void onClick(View view) {
         if (R.id.iv_location == view.getId() || R.id.tv_location == view.getId()) {
             mPresenter.navToLocation();
+        } else if (R.id.ll_search == view.getId()) {
+            mPresenter.navToSearch();
         }
     }
 }

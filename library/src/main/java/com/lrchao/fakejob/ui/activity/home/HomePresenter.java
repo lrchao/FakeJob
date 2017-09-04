@@ -67,6 +67,11 @@ public class HomePresenter extends BasePresenter<HomeContract.View> implements
     }
 
     @Override
+    public void navToSearch() {
+        NavUtils.get().navToSearch(getContext());
+    }
+
+    @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
         if (SharedPreferenceKey.PREF_CURRENT_LOCATION.getKey().equals(s)) {
 
