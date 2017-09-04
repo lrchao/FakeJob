@@ -96,18 +96,26 @@ public class JobItemView extends LinearLayout implements View.OnClickListener {
         if (m == 1) {
 
             mIvMark.setBackgroundResource(R.drawable.clear_month);
+            mIvMark.setVisibility(View.VISIBLE);
 
         } else if (m == 3) {
 
             mIvMark.setBackgroundResource(R.drawable.clear_ohter);
+            mIvMark.setVisibility(View.VISIBLE);
 
         } else if (m == 8) {
 
             mIvMark.setBackgroundResource(R.drawable.clear_over);
+            mIvMark.setVisibility(View.VISIBLE);
 
         } else if (m == 6) {
 
             mIvMark.setBackgroundResource(R.drawable.clear_week);
+            mIvMark.setVisibility(View.VISIBLE);
+
+        } else {
+
+            mIvMark.setVisibility(View.GONE);
 
         }
 
