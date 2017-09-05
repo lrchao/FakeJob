@@ -35,7 +35,7 @@ public abstract class SwipeRefreshFragment extends PageNetworkFragment implement
 
     @Override
     protected final View getLayoutView(LayoutInflater inflater, ViewGroup container, boolean attachToRoot) {
-        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_swipe_refresh, container, attachToRoot);
+        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.job_fragment_swipe_refresh, container, attachToRoot);
         mSwipeRefreshLayout = (CustomSwipeRefreshLayout) viewGroup.getChildAt(0);
         mSwipeRefreshLayout.init();
         mSwipeRefreshLayout.setOnRefreshListener(this);

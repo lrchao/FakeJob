@@ -131,7 +131,7 @@ public class PagePresenter extends NetworkPresenter implements
                 if (mMvpView instanceof MvpPageView) {
                     MvpPageView mvpRequestPageView = (MvpPageView) mMvpView;
                     mvpRequestPageView.showPageFailed(requestFailure.getFriendlyMsg(),
-                            ResourceUtils.getString(R.string.page_click_retry));
+                            ResourceUtils.getString(R.string.job_page_click_retry));
                 }
             }
         }

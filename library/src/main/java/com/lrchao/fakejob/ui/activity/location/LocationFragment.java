@@ -48,7 +48,7 @@ public class LocationFragment extends BaseFragment {
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_location;
+        return R.layout.job_fragment_location;
     }
 
     @Override
@@ -116,7 +116,7 @@ public class LocationFragment extends BaseFragment {
     }
 
     private void setAdapter() {
-        SourceDateList = filledData(getResources().getStringArray(R.array.provinces));
+        SourceDateList = filledData(getResources().getStringArray(R.array.job_provinces));
         Collections.sort(SourceDateList, new PinyinComparator());
         adapter = new SortAdapter(getContext(), SourceDateList);
         sortListView.addHeaderView(initHeadView());
@@ -170,18 +170,18 @@ public class LocationFragment extends BaseFragment {
     }
 
     private View initHeadView() {
-        View headView = LayoutInflater.from(getContext()).inflate(R.layout.headview, null);
+        View headView = LayoutInflater.from(getContext()).inflate(R.layout.job_headview, null);
 
         Button currentLocation = headView.findViewById(R.id.btn_city_name);
         currentLocation.setText(MyLocationManager.getInstance().getCurrentLocation());
 
         GridView mGvCity = headView.findViewById(R.id.gv_hot_city);
-        String[] datas = getResources().getStringArray(R.array.city);
+        String[] datas = getResources().getStringArray(R.array.job_city);
         ArrayList<String> cityList = new ArrayList<>();
         for (int i = 0; i < datas.length; i++) {
             cityList.add(datas[i]);
         }
-        CityAdapter adapter = new CityAdapter(getContext(), R.layout.gridview_item, cityList);
+        CityAdapter adapter = new CityAdapter(getContext(), R.layout.job_gridview_item, cityList);
         mGvCity.setAdapter(adapter);
         return headView;
     }

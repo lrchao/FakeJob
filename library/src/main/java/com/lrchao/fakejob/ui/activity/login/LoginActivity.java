@@ -28,7 +28,7 @@ public class LoginActivity extends CommonActivity {
 
     @Override
     protected void initView() {
-        setToolbarTitle(R.string.toolbar_login);
+        setToolbarTitle(R.string.job_toolbar_login);
         setToolbarTitleColor(R.color.white);
 
         setToolbarBackView();

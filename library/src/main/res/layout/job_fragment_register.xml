@@ -22,7 +22,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="30dp"
                 android:contentDescription="@string/app_name"
-                android:background="@drawable/ic_launcher"/>
+                android:background="@drawable/job_ic_launcher"/>
 
 
             <LinearLayout
@@ -36,7 +36,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="@string/phone_number">
+                    android:hint="@string/job_phone_number">
 
                     <EditText
                         android:id="@+id/et_phone_number"
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:hint="@string/pwd">
+                android:hint="@string/job_pwd">
 
                 <EditText
                     android:id="@+id/et_password"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:hint="@string/confirm_pwd">
+                android:hint="@string/job_confirm_pwd">
 
                 <EditText
                     android:id="@+id/et_confirm_password"
@@ -86,10 +86,10 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/sel_btn_blue_light_5"
+                android:background="@drawable/job_sel_btn_blue_light_5"
                 android:gravity="center"
                 android:padding="12dp"
-                android:text="@string/toolbar_register"
+                android:text="@string/job_toolbar_register"
                 android:textColor="@color/white"/>
 
             <LinearLayout
@@ -109,7 +109,7 @@
                     android:id="@+id/tv_forward_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/toolbar_login"/>
+                    android:text="@string/job_toolbar_login"/>
 
             </LinearLayout>
 

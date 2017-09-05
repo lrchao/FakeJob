@@ -83,7 +83,7 @@ public class JobDetailsFragment extends PageNetworkFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_fake_job_details;
+        return R.layout.job_fragment_job_details;
     }
 
     @Override
@@ -129,7 +129,7 @@ public class JobDetailsFragment extends PageNetworkFragment implements
     public void bindTopView(String title, String actionType, int peopleCount, String settlementType, String price, String priceUnit, boolean join) {
         mTvTitle.setText(title);
         mTvActionType.setText(actionType);
-        mTvPeopleCount.setText(ResourceUtils.getString(R.string.unit_people, peopleCount));
+        mTvPeopleCount.setText(ResourceUtils.getString(R.string.job_unit_people, peopleCount));
         mTvSettlementType.setText(settlementType);
         mTvPrice.setText(price);
         mTvPriceUnit.setText(priceUnit);

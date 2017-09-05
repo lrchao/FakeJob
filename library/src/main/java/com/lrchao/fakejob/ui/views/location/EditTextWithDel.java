@@ -46,7 +46,7 @@ public class EditTextWithDel extends EditText {
 
     private void init() {
         imgAble = mContext.getResources().getDrawable(
-                R.mipmap.icon_delete_gray);
+                R.mipmap.job_icon_delete_gray);
         addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before,

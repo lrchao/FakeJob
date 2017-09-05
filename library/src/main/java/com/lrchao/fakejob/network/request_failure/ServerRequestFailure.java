@@ -25,7 +25,7 @@ public class ServerRequestFailure extends RequestFailure {
 
     @Override
     public String getFriendlyMsg() {
-        return ResourceUtils.getString(R.string.error_server);
+        return ResourceUtils.getString(R.string.job_error_server);
     }
 
     public int getCode() {

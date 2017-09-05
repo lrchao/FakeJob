@@ -36,7 +36,7 @@ public class MyFavoritesListFragment extends PageNetworkFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_my_fav_list;
+        return R.layout.job_fragment_my_fav_list;
     }
 
     @Override

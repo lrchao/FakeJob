@@ -17,13 +17,13 @@
             android:layout_height="6dp"
             android:contentDescription="@string/app_name"
             android:layout_marginTop="5dp"
-            android:background="@color/yellow_FFCC00"/>
+            android:background="@color/job_yellow_FFCC00"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:text="@string/interview_date"/>
+            android:text="@string/job_interview_date"/>
 
         <TextView
             android:id="@+id/tv_interview_date"
@@ -40,7 +40,7 @@
         android:layout_height="1dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
-        android:background="@color/gray_divider"/>
+        android:background="@color/job_gray_divider"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/interview_address"/>
+            android:text="@string/job_interview_address"/>
 
         <TextView
             android:id="@+id/tv_interview_address"

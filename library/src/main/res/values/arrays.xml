@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 
-    <string-array name="city">
+    <string-array name="job_city">
         <item>北京</item>
         <item>成都</item>
         <item>重庆</item>
@@ -15,7 +15,7 @@
         <item>西安</item>
     </string-array>
 
-    <string-array name="provinces">
+    <string-array name="job_provinces">
         <item>广东</item>
         <item>北京</item>
         <item>福建</item>

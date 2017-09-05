@@ -1,68 +1,66 @@
 <resources>
-    <string name="app_name">fakejob</string>
-
     <!-- 异常提示 -->
-    <string name="error_network">您的网络不可用，请检查</string>
-    <string name="error_server">服务端异常，请您稍后重试～</string>
-    <string name="error_logout">您当前未登陆，请先登陆～</string>
+    <string name="job_error_network">您的网络不可用，请检查</string>
+    <string name="job_error_server">服务端异常，请您稍后重试～</string>
+    <string name="job_error_logout">您当前未登陆，请先登陆～</string>
 
     <!-- Dialog -->
-    <string name="dialog_loading">请稍后～</string>
+    <string name="job_dialog_loading">请稍后～</string>
 
     <!-- Page 页面显示的提示-->
-    <string name="page_empty">暂无数据～</string>
-    <string name="page_click_retry">重试</string>
+    <string name="job_page_empty">暂无数据～</string>
+    <string name="job_page_click_retry">重试</string>
 
     <!-- Main -->
-    <string name="main_tab_homepage">首页</string>
-    <string name="main_tab_job">兼职</string>
-    <string name="main_tab_personal">&#160;&#160;我&#160;&#160;</string>
-    <string name="toast_quit_tip">再按一次退出程序</string>
+    <string name="job_main_tab_homepage">首页</string>
+    <string name="job_main_tab_job">兼职</string>
+    <string name="job_main_tab_personal">&#160;&#160;我&#160;&#160;</string>
+    <string name="job_toast_quit_tip">再按一次退出程序</string>
 
     <!-- Home -->
-    <string name="main_category_location">附近兼职</string>
-    <string name="main_category_newest">最新兼职</string>
-    <string name="main_category_weekend">周末兼职</string>
-    <string name="main_category_student">学生兼职</string>
+    <string name="job_main_category_location">附近兼职</string>
+    <string name="job_main_category_newest">最新兼职</string>
+    <string name="job_main_category_weekend">周末兼职</string>
+    <string name="job_main_category_student">学生兼职</string>
 
     <!-- toolbar -->
-    <string name="toolbar_home">首页</string>
-    <string name="toolbar_part_time_job">兼职</string>
-    <string name="toolbar_mine">我</string>
-    <string name="toolbar_job_details">详情页</string>
-    <string name="toolbar_login">登陆</string>
-    <string name="toolbar_register">注册</string>
+    <string name="job_toolbar_home">首页</string>
+    <string name="job_toolbar_part_time_job">兼职</string>
+    <string name="job_toolbar_mine">我</string>
+    <string name="job_toolbar_job_details">详情页</string>
+    <string name="job_toolbar_login">登陆</string>
+    <string name="job_toolbar_register">注册</string>
 
 
-    <string name="unit_yuan_day">元/天</string>
+    <string name="job_unit_yuan_day">元/天</string>
 
-    <string name="hot_part_time_job">热门兼职</string>
+    <string name="job_hot_part_time_job">热门兼职</string>
 
-    <string name="login_register">登陆/注册</string>
-    <string name="logout">登出</string>
+    <string name="job_login_register">登陆/注册</string>
+    <string name="job_logout">登出</string>
 
 
-    <string name="pipe">&#124;</string>
-    <string name="work_date">工作时间：</string>
-    <string name="work_address">工作地点</string>
-    <string name="salary">薪资福利</string>
+    <string name="job_pipe">&#124;</string>
+    <string name="job_work_date">工作时间：</string>
+    <string name="job_work_address">工作地点</string>
+    <string name="job_salary">薪资福利</string>
     <string name="job_desc">职位描述</string>
-    <string name="sign_up">报名截止：</string>
-    <string name="interview_date">面试时间：</string>
-    <string name="company_info">公司信息：</string>
-    <string name="other_see">报名职位的人还看了</string>
-    <string name="interview_address">面试地址：</string>
-    <string name="join">报名参加</string>
+    <string name="job_sign_up">报名截止：</string>
+    <string name="job_interview_date">面试时间：</string>
+    <string name="job_company_info">公司信息：</string>
+    <string name="job_other_see">报名职位的人还看了</string>
+    <string name="job_interview_address">面试地址：</string>
+    <string name="job_join">报名参加</string>
 
-    <string name="unit_people">%1$d人</string>
+    <string name="job_unit_people">%1$d人</string>
 
-    <string name="toast_login_error">登陆失败，请稍后重试～</string>
-    <string name="user_name">手机号/用户名/邮箱</string>
+    <string name="job_toast_login_error">登陆失败，请稍后重试～</string>
+    <string name="job_user_name">手机号/用户名/邮箱</string>
 
-    <string name="pwd">密码</string>
+    <string name="job_pwd">密码</string>
 
-    <string name="phone_number">手机号</string>
-    <string name="confirm_pwd">确认密码</string>
+    <string name="job_phone_number">手机号</string>
+    <string name="job_confirm_pwd">确认密码</string>
 
-    <string name="toolbar_my_job">我的兼职</string>
+    <string name="job_toolbar_my_job">我的兼职</string>
 </resources>

@@ -77,13 +77,13 @@ public class HomeFragment extends SwipeRefreshFragment implements
         mGroupLayout = parentView.findViewById(R.id.layout_group);
 
         List<LrchaoGridViewModel> data = new ArrayList<>();
-        data.add(bindGridView(R.drawable.home_category_location, R.string.main_category_location, 1));
-        data.add(bindGridView(R.drawable.home_category_newest, R.string.main_category_newest, 2));
-        data.add(bindGridView(R.drawable.home_category_weekend, R.string.main_category_weekend, 3));
-        data.add(bindGridView(R.drawable.home_category_student, R.string.main_category_student, 4));
+        data.add(bindGridView(R.drawable.job_home_category_location, R.string.job_main_category_location, 1));
+        data.add(bindGridView(R.drawable.job_home_category_newest, R.string.job_main_category_newest, 2));
+        data.add(bindGridView(R.drawable.job_home_category_weekend, R.string.job_main_category_weekend, 3));
+        data.add(bindGridView(R.drawable.job_home_category_student, R.string.job_main_category_student, 4));
 
         MenuGridIconTextAdapter categoryAdapter = new MenuGridIconTextAdapter(data);
-        categoryAdapter.setLayoutResId(R.layout.home_category_item);
+        categoryAdapter.setLayoutResId(R.layout.job_home_category_item);
         categoryAdapter.setOnLrchaoItemClickListener(this);
         mGridLayout.setSpanCount(4);
         mGridLayout.setAdapter(categoryAdapter);
@@ -116,9 +116,9 @@ public class HomeFragment extends SwipeRefreshFragment implements
 
         List<Integer> urlList = new ArrayList<>();
 
-        urlList.add(R.drawable.banner_1);
-        urlList.add(R.drawable.banner_2);
-        urlList.add(R.drawable.banner_3);
+        urlList.add(R.drawable.job_banner_1);
+        urlList.add(R.drawable.job_banner_2);
+        urlList.add(R.drawable.job_banner_3);
 
 
         //设置banner样式

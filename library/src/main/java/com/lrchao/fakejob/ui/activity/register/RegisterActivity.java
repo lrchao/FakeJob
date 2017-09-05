@@ -28,7 +28,7 @@ public class RegisterActivity extends CommonActivity {
 
     @Override
     protected void initView() {
-        setToolbarTitle(R.string.toolbar_register);
+        setToolbarTitle(R.string.job_toolbar_register);
         setToolbarTitleColor(R.color.white);
         setToolbarBackView();
     }

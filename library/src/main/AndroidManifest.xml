@@ -5,20 +5,20 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/JobAppTheme"
         >
 
         <activity android:name=".ui.activity.main.MainActivity"/>
         <activity android:name=".ui.activity.category.CategoryJobListActivity"/>
         <activity android:name=".ui.activity.job.JobDetailsActivity"/>
-        <activity android:name=".ui.activity.job.MyJobListActivity" />
+        <activity android:name=".ui.activity.job.MyJobListActivity"/>
         <activity android:name=".ui.activity.login.LoginActivity"/>
-        <activity android:name=".ui.activity.register.RegisterActivity" />
-        <activity android:name=".ui.activity.favorites.MyFavoritesListActivity" />
-        <activity android:name=".ui.activity.location.LocationActivity" />
-        <activity android:name=".ui.activity.search.SearchActivity" />
+        <activity android:name=".ui.activity.register.RegisterActivity"/>
+        <activity android:name=".ui.activity.favorites.MyFavoritesListActivity"/>
+        <activity android:name=".ui.activity.location.LocationActivity"/>
+        <activity android:name=".ui.activity.search.SearchActivity"/>
+
         <service
             android:name=".service.RequestService"
             android:exported="false"/>

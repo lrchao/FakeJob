@@ -33,7 +33,7 @@ public class PartTimeJobFragment extends PageNetworkFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_part_time_job;
+        return R.layout.job_fragment_part_time_job;
     }
 
     @Override

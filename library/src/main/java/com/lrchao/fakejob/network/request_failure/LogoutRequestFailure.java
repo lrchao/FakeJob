@@ -14,6 +14,6 @@ public class LogoutRequestFailure extends RequestFailure {
 
     @Override
     public String getFriendlyMsg() {
-        return ResourceUtils.getString(R.string.error_logout);
+        return ResourceUtils.getString(R.string.job_error_logout);
     }
 }

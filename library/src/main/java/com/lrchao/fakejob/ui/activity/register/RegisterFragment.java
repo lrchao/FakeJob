@@ -34,7 +34,7 @@ public class RegisterFragment extends NetworkFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_register;
+        return R.layout.job_fragment_register;
     }
 
     @Override

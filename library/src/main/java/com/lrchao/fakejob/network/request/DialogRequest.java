@@ -20,7 +20,7 @@ public abstract class DialogRequest<T> extends BaseRequest<T> {
      * 获取Loading Dialog 显示的文本
      */
     public String getLoadingText() {
-        return ResourceUtils.getString(R.string.dialog_loading);
+        return ResourceUtils.getString(R.string.job_dialog_loading);
     }
 
     /**

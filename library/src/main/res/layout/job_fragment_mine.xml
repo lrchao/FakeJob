@@ -12,7 +12,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/gray_bg"
+            android:background="@color/job_gray_bg"
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:paddingBottom="20dp">
@@ -33,13 +33,13 @@
                 <com.lrchao.views.imageview.MyCircleImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/default_user_icon"/>
+                    android:background="@drawable/job_default_user_icon"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
-                    android:text="@string/login_register"
+                    android:text="@string/job_login_register"
                     android:textColor="@color/text_content"
                     android:textSize="18sp"/>
 
@@ -79,7 +79,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="14dp"
-                android:background="@color/gray_bg"/>
+                android:background="@color/job_gray_bg"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@drawable/home_me_apply"/>
+                        android:background="@drawable/job_home_me_apply"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@drawable/home_me_processing"/>
+                        android:background="@drawable/job_home_me_processing"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@drawable/home_me_eval"/>
+                        android:background="@drawable/job_home_me_eval"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -171,7 +171,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@drawable/home_me_finish"/>
+                        android:background="@drawable/job_home_me_finish"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -185,7 +185,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="14dp"
-                android:background="@color/gray_bg"/>
+                android:background="@color/job_gray_bg"/>
 
             <com.lrchao.views.itemview.ItemGroupLayout
                 android:id="@+id/layout_group"
@@ -199,10 +199,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/btn_bg_gray_10"
+                android:background="@drawable/job_btn_bg_gray_10"
                 android:gravity="center"
                 android:padding="14dp"
-                android:text="@string/logout"
+                android:text="@string/job_logout"
                 android:textColor="@color/white"
                 android:textSize="20sp"/>
 

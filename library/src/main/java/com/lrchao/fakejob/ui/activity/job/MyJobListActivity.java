@@ -27,7 +27,7 @@ public class MyJobListActivity extends CommonActivity {
 
     @Override
     protected void initView() {
-        setToolbarTitle(R.string.toolbar_my_job);
+        setToolbarTitle(R.string.job_toolbar_my_job);
         setToolbarTitleColor(R.color.white);
         setToolbarBackView();
     }

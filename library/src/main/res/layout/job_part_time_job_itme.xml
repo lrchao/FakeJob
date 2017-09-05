@@ -10,8 +10,8 @@
         android:id="@+id/tv_category_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hot_part_time_job"
-        android:textColor="@color/text_red"
+        android:text="@string/job_hot_part_time_job"
+        android:textColor="@color/job_text_red"
         android:textSize="18sp"
         android:textStyle="bold"
         />

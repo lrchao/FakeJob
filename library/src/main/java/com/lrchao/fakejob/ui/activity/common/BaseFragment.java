@@ -119,7 +119,7 @@ public abstract class BaseFragment extends Fragment implements
         } else {
             // 如果TO未添加则添加
             to.setArguments(bundle);
-            transaction.add(R.id.fragment_container, to);
+            transaction.add(R.id.job_fragment_container, to);
         }
         if (!mFragmentManager.isDestroyed()) {
             transaction.commitAllowingStateLoss();
@@ -134,7 +134,7 @@ public abstract class BaseFragment extends Fragment implements
 
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
 
-        transaction.replace(R.id.fragment_container, fragment);
+        transaction.replace(R.id.job_fragment_container, fragment);
 
         if (!mFragmentManager.isDestroyed() && !fragment.isAdded()) {
             transaction.commitAllowingStateLoss();
@@ -144,7 +144,7 @@ public abstract class BaseFragment extends Fragment implements
     protected final void showFragmentAddStack(Fragment fragment) {
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
         transaction.addToBackStack(null);
-        transaction.replace(R.id.fragment_container, fragment);
+        transaction.replace(R.id.job_fragment_container, fragment);
 
         if (!mFragmentManager.isDestroyed() && !fragment.isAdded()) {
             transaction.commitAllowingStateLoss();

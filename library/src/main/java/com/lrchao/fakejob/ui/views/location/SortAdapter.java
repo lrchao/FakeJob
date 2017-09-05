@@ -56,7 +56,7 @@ public class SortAdapter extends BaseAdapter implements SectionIndexer {
         final CitySortModel mContent = list.get(position);
         if (view == null) {
             viewHolder = new ViewHolder();
-            view = LayoutInflater.from(mContext).inflate(R.layout.item_select_city, null);
+            view = LayoutInflater.from(mContext).inflate(R.layout.job_item_select_city, null);
             viewHolder.tvTitle = (TextView) view.findViewById(R.id.tv_city_name);
             view.setTag(viewHolder);
             viewHolder.tvLetter = (TextView) view.findViewById(R.id.tv_catagory);

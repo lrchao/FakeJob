@@ -44,7 +44,7 @@ public class PartTimeJobItemView extends LinearLayout implements LrchaoGridAdapt
     }
 
     private void init(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.part_time_job_itme, this);
+        LayoutInflater.from(context).inflate(R.layout.job_part_time_job_itme, this);
         mTvSubTitle = findViewById(R.id.tv_category_subtitle);
         mGridLayout = findViewById(R.id.layout_category);
     }
@@ -60,7 +60,7 @@ public class PartTimeJobItemView extends LinearLayout implements LrchaoGridAdapt
         }
 
         MenuGridIconTextAdapter categoryAdapter = new MenuGridIconTextAdapter(data);
-        categoryAdapter.setLayoutResId(R.layout.part_time_job_item);
+        categoryAdapter.setLayoutResId(R.layout.job_part_time_job_item);
         categoryAdapter.setOnLrchaoItemClickListener(this);
         mGridLayout.setSpanCount(3);
         mGridLayout.setAdapter(categoryAdapter);

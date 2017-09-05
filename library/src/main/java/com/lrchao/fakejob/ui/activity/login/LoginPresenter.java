@@ -51,7 +51,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
     @Override
     public void login(CharSequence userName, CharSequence password) {
         if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(password)) {
-            getMvpView().showToast(R.string.toast_login_error);
+            getMvpView().showToast(R.string.job_toast_login_error);
             return;
         }
 

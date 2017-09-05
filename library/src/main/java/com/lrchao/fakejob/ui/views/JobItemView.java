@@ -52,7 +52,7 @@ public class JobItemView extends LinearLayout implements View.OnClickListener {
     }
 
     private void init(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.home_job_list_item, this);
+        LayoutInflater.from(context).inflate(R.layout.job_home_job_list_item, this);
 
         mIvIcon = findViewById(R.id.iv_icon);
         mTvTitle = findViewById(R.id.tv_title);
@@ -93,22 +93,22 @@ public class JobItemView extends LinearLayout implements View.OnClickListener {
         int m = Integer.valueOf(String.valueOf(c));
         if (m == 1) {
 
-            mIvMark.setBackgroundResource(R.drawable.clear_month);
+            mIvMark.setBackgroundResource(R.drawable.job_clear_month);
             mIvMark.setVisibility(View.VISIBLE);
 
         } else if (m == 3) {
 
-            mIvMark.setBackgroundResource(R.drawable.clear_ohter);
+            mIvMark.setBackgroundResource(R.drawable.job_clear_ohter);
             mIvMark.setVisibility(View.VISIBLE);
 
         } else if (m == 8) {
 
-            mIvMark.setBackgroundResource(R.drawable.clear_over);
+            mIvMark.setBackgroundResource(R.drawable.job_clear_over);
             mIvMark.setVisibility(View.VISIBLE);
 
         } else if (m == 6) {
 
-            mIvMark.setBackgroundResource(R.drawable.clear_week);
+            mIvMark.setBackgroundResource(R.drawable.job_clear_week);
             mIvMark.setVisibility(View.VISIBLE);
 
         } else {

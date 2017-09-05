@@ -147,7 +147,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
      */
     protected final void setToolbarBackView() {
         initToolbar();
-        mToolbarView.setNavigationIcon(R.drawable.toolbar_back);
+        mToolbarView.setNavigationIcon(R.drawable.job_toolbar_back);
         mToolbarView.setOnNavigationClickListener(new OnNavigationClickListener() {
             @Override
             public void onNavigationClick() {
@@ -271,7 +271,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
 
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
 
-        transaction.replace(R.id.fragment_container, fragment);
+        transaction.replace(R.id.job_fragment_container, fragment);
 
         if (!mFragmentManager.isDestroyed() && !fragment.isAdded()) {
             transaction.commitAllowingStateLoss();
@@ -319,7 +319,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
         } else {
             // 如果TO未添加则添加
             to.setArguments(bundle);
-            transaction.add(R.id.fragment_container, to);
+            transaction.add(R.id.job_fragment_container, to);
         }
         if (!mFragmentManager.isDestroyed()) {
             transaction.commitAllowingStateLoss();
@@ -509,7 +509,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
 
     private void initToolbar() {
         if (mToolbarView == null) {
-            mToolbarView = (LrchaoToolBar) findViewById(R.id.toolbar_lrchao);
+            mToolbarView = (LrchaoToolBar) findViewById(R.id.job_toolbar_lrchao);
         }
     }
 

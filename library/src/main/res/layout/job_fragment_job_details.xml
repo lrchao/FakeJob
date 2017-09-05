@@ -14,28 +14,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/gray_bg"
+            android:background="@color/job_gray_bg"
             android:orientation="vertical"
             android:paddingBottom="20dp"
             >
 
             <!-- 头部-->
             <include
-                layout="@layout/layout_job_details_top"
+                layout="@layout/job_layout_job_details_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
 
             <!-- 工作时间  工作地点-->
             <include
-                layout="@layout/layout_job_details_date_address"
+                layout="@layout/job_layout_job_details_date_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
 
             <!-- 薪资 福利 -->
             <include
-                layout="@layout/layout_job_details_salary_welfare"
+                layout="@layout/job_layout_job_details_salary_welfare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
@@ -43,7 +43,7 @@
 
             <!-- 面试 -->
             <include
-                layout="@layout/layout_job_details_interview"
+                layout="@layout/job_layout_job_details_interview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
@@ -64,13 +64,13 @@
                     android:layout_height="6dp"
                     android:layout_marginTop="5dp"
                     android:contentDescription="@string/app_name"
-                    android:background="@color/yellow_FFCC00"/>
+                    android:background="@color/job_yellow_FFCC00"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-                    android:text="@string/company_info"/>
+                    android:text="@string/job_company_info"/>
 
                 <TextView android:id="@+id/tv_company_info"
                     android:layout_width="wrap_content"
@@ -97,19 +97,19 @@
                     android:layout_height="6dp"
                     android:layout_marginTop="5dp"
                     android:contentDescription="@string/app_name"
-                    android:background="@color/yellow_FFCC00"/>
+                    android:background="@color/job_yellow_FFCC00"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-                    android:text="@string/other_see"/>
+                    android:text="@string/job_other_see"/>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/gray_divider"/>
+                android:background="@color/job_gray_divider"/>
 
             <com.lrchao.views.itemview.ItemGroupLayout
                 android:id="@+id/layout_other_jobs"
@@ -123,9 +123,9 @@
     <TextView android:id="@+id/tv_join"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/yellow_FE8020"
+        android:background="@color/job_yellow_FE8020"
         android:gravity="center"
         android:padding="16dp"
-        android:text="@string/join"
+        android:text="@string/job_join"
         android:textColor="@color/white"/>
 </LinearLayout>

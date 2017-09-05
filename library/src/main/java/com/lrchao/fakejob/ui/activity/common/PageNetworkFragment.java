@@ -56,7 +56,7 @@ public abstract class PageNetworkFragment extends NetworkFragment
      */
     protected final void showPageLoadingViewEmpty() {
         if (TextUtils.isEmpty(getEmptyPageStr())) {
-            mPageLoadingView.show(ResourceUtils.getString(R.string.page_empty), "");
+            mPageLoadingView.show(ResourceUtils.getString(R.string.job_page_empty), "");
         } else {
             mPageLoadingView.show(getEmptyPageStr(), "");
         }

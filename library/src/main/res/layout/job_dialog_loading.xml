@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:lineSpacingExtra="3.0dip"
-            android:textColor="@color/gray_divider"
+            android:textColor="@color/job_gray_divider"
             android:textSize="17.0sp"/>
     </LinearLayout>
 

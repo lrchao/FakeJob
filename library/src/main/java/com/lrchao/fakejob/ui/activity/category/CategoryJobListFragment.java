@@ -41,7 +41,7 @@ public class CategoryJobListFragment extends PageNetworkFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_category_list;
+        return R.layout.job_fragment_category_list;
     }
 
     @Override

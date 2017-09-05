@@ -32,7 +32,7 @@ public class LoginFragment extends NetworkFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_login;
+        return R.layout.job_fragment_login;
     }
 
     @Override

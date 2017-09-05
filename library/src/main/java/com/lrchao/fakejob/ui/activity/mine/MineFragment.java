@@ -46,7 +46,7 @@ public class MineFragment extends NetworkFragment implements
 
     @Override
     protected int getLayoutViewId() {
-        return R.layout.fragment_mine;
+        return R.layout.job_fragment_mine;
     }
 
     @Override
@@ -83,7 +83,7 @@ public class MineFragment extends NetworkFragment implements
 
         IconTextItemLayout itemMyJob = new IconTextItemLayout(getContext());
         itemMyJob.mTvTitle.setText("我的兼职");
-        itemMyJob.mIvIcon.setBackgroundResource(R.drawable.ic_my_job);
+        itemMyJob.mIvIcon.setBackgroundResource(R.drawable.job_ic_my_job);
         itemMyJob.setOnIconTextItemLayoutClickListener(new IconTextItemLayout.OnIconTextItemLayoutClickListener() {
             @Override
             public void onIconTextItemLayoutClick() {
@@ -99,7 +99,7 @@ public class MineFragment extends NetworkFragment implements
 
         IconTextItemLayout itemFav = new IconTextItemLayout(getContext());
         itemFav.mTvTitle.setText("我的收藏");
-        itemFav.mIvIcon.setBackgroundResource(R.drawable.ic_my_fav);
+        itemFav.mIvIcon.setBackgroundResource(R.drawable.job_ic_my_fav);
         itemFav.setOnIconTextItemLayoutClickListener(new IconTextItemLayout.OnIconTextItemLayoutClickListener() {
             @Override
             public void onIconTextItemLayoutClick() {
@@ -113,7 +113,7 @@ public class MineFragment extends NetworkFragment implements
 
         IconTextItemLayout itemService = new IconTextItemLayout(getContext());
         itemService.mTvTitle.setText("商家合作");
-        itemService.mIvIcon.setBackgroundResource(R.drawable.ic_service);
+        itemService.mIvIcon.setBackgroundResource(R.drawable.job_ic_service);
         itemService.setOnIconTextItemLayoutClickListener(new IconTextItemLayout.OnIconTextItemLayoutClickListener() {
             @Override
             public void onIconTextItemLayoutClick() {

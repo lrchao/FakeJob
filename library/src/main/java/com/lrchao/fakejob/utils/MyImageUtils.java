@@ -29,7 +29,7 @@ public final class MyImageUtils {
         }
         ImageUtils.display(imgUrl,
                 imageView,
-                R.drawable.default_app_icon,
+                R.drawable.job_default_app_icon,
                 null,
                 true,
                 0,
@@ -52,7 +52,7 @@ public final class MyImageUtils {
 
         ImageUtils.display(imgUrl,
                 imageView,
-                R.drawable.default_user_icon,
+                R.drawable.job_default_user_icon,
                 null,
                 true,
                 0,
@@ -70,7 +70,7 @@ public final class MyImageUtils {
 
         ImageUtils.display(imgUrl,
                 imageView,
-                R.drawable.default_app_icon,
+                R.drawable.job_default_app_icon,
                 null,
                 true,
                 0,

@@ -18,7 +18,7 @@ public class NetworkRequestFailure extends RequestFailure {
 
     @Override
     public String getFriendlyMsg() {
-        return ResourceUtils.getString(R.string.error_network);
+        return ResourceUtils.getString(R.string.job_error_network);
     }
 
 

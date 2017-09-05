@@ -70,29 +70,29 @@ public class MainActivity extends BaseActivity implements MainTabLayout.OnMainTa
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
 
         mMainTabLayout.addItem(
-                R.drawable.main_tab_homepage_nor,
-                R.drawable.main_tab_homepage_sel,
-                R.string.main_tab_homepage,
+                R.drawable.job_main_tab_homepage_nor,
+                R.drawable.job_main_tab_homepage_sel,
+                R.string.job_main_tab_homepage,
                 R.color.black,
-                R.color.blue_389dbd,
+                R.color.job_blue_389dbd,
                 R.color.white,
                 R.color.white);
 
         mMainTabLayout.addItem(
-                R.drawable.main_tab_job_nor,
-                R.drawable.main_tab_job_sel,
-                R.string.main_tab_job,
+                R.drawable.job_main_tab_job_nor,
+                R.drawable.job_main_tab_job_sel,
+                R.string.job_main_tab_job,
                 R.color.black,
-                R.color.blue_389dbd,
+                R.color.job_blue_389dbd,
                 R.color.white,
                 R.color.white);
 
         mMainTabLayout.addItem(
-                R.drawable.main_tab_personal_nor,
-                R.drawable.main_tab_personal_sel,
-                R.string.main_tab_personal,
+                R.drawable.job_main_tab_personal_nor,
+                R.drawable.job_main_tab_personal_sel,
+                R.string.job_main_tab_personal,
                 R.color.black,
-                R.color.blue_389dbd,
+                R.color.job_blue_389dbd,
                 R.color.white,
                 R.color.white);
 
@@ -161,7 +161,7 @@ public class MainActivity extends BaseActivity implements MainTabLayout.OnMainTa
             SessionManager.getInstance().endAtMain();
             this.finish();
         } else {
-            ToastUtils.show(R.string.toast_quit_tip);
+            ToastUtils.show(R.string.job_toast_quit_tip);
             mLastBackTime = currentTime;
         }
     }
