@@ -8,7 +8,7 @@ import android.os.Message;
 import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
 
-import com.lrchao.fakejob.MyApplication;
+import com.lrchao.fakejob.JobApp;
 import com.lrchao.fakejob.eventbus.receiver.BaseEventReceiverModel;
 import com.lrchao.fakejob.mvp.common.ListPresenter;
 import com.lrchao.fakejob.mvp.common.NetworkPresenter;
@@ -116,7 +116,7 @@ public abstract class BasePresenter<T extends MvpView> implements MvpPresenter<T
      * 获取Context
      */
     protected final Context getContext() {
-        return MyApplication.getApplication();
+        return JobApp.getInstance().getContext();
     }
 
     /**

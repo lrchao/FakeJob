@@ -3,7 +3,7 @@ package com.lrchao.fakejob.service;
 import android.app.IntentService;
 import android.content.Intent;
 
-import com.lrchao.fakejob.MyApplication;
+import com.lrchao.fakejob.JobApp;
 import com.lrchao.fakejob.constant.BundleKey;
 import com.lrchao.fakejob.network.request.RequestManager;
 import com.lrchao.fakejob.network.request.RequestSender;
@@ -27,7 +27,7 @@ public class RequestService extends IntentService {
      * @return Intent
      */
     public static Intent newStartIntent(int action) {
-        Intent newIntent = new Intent(MyApplication.getApplication(), RequestService.class);
+        Intent newIntent = new Intent(JobApp.getInstance().getContext(), RequestService.class);
         newIntent.putExtra(BundleKey.INTENT_EXTRA_REQUEST_ACTION, action);
         return newIntent;
     }

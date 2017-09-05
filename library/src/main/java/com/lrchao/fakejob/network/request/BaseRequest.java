@@ -6,7 +6,7 @@ import android.support.annotation.WorkerThread;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
-import com.lrchao.fakejob.MyApplication;
+import com.lrchao.fakejob.JobApp;
 import com.lrchao.fakejob.eventbus.poster.network.RequestResultEventPoster;
 import com.lrchao.fakejob.eventbus.poster.network.RequestWhenEventPoster;
 import com.lrchao.fakejob.model.json.EmptyModel;
@@ -117,7 +117,7 @@ public abstract class BaseRequest<T> {
      * @return URL的host
      */
     protected String getHost() {
-        return MyApplication.getApplication().getHostUrl();
+        return JobApp.getInstance().getHostUrl();
     }
 
     /**

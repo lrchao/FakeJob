@@ -21,7 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lrchao.fakejob.MyApplication;
+import com.lrchao.fakejob.JobApp;
 import com.lrchao.fakejob.R;
 import com.lrchao.fakejob.exception.InitializationNotCompleteException;
 import com.lrchao.fakejob.manager.session.SessionManager;
@@ -616,7 +616,7 @@ public abstract class BaseFragment extends Fragment implements
             }
         }
 
-        LocalBroadcastManager.getInstance(MyApplication.getApplication())
+        LocalBroadcastManager.getInstance(JobApp.getInstance().getContext())
                 .registerReceiver(mLocalBroadcastReceiver, filter);
     }
 

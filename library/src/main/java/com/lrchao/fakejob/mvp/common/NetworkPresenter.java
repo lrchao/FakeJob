@@ -3,7 +3,7 @@ package com.lrchao.fakejob.mvp.common;
 import android.content.Intent;
 import android.support.annotation.CallSuper;
 
-import com.lrchao.fakejob.MyApplication;
+import com.lrchao.fakejob.JobApp;
 import com.lrchao.fakejob.constant.BundleKey;
 import com.lrchao.fakejob.eventbus.receiver.mvp.RequestResultEventReceiverMvp;
 import com.lrchao.fakejob.eventbus.receiver.mvp.RequestWhenEventReceiverMvp;
@@ -90,7 +90,7 @@ public class NetworkPresenter implements MvpPresenter,
         }
         mRequestActionList.add(action);
 
-        MyApplication.getApplication().startService(intent);
+        JobApp.getInstance().getContext().startService(intent);
     }
 
     @CallSuper

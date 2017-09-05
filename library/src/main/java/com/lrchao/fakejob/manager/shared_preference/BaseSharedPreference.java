@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.lrchao.fakejob.MyApplication;
+import com.lrchao.fakejob.JobApp;
 import com.lrchao.fakejob.constant.SharedPreferenceKey;
 import com.lrchao.fakejob.exception.IllegalParamException;
 
@@ -30,7 +30,7 @@ public abstract class BaseSharedPreference {
     private PreferenceOperator mOperator;
 
     public BaseSharedPreference() {
-        mSharedPreferences = MyApplication.getApplication().getSharedPreferences(getName(), Context.MODE_PRIVATE);
+        mSharedPreferences = JobApp.getInstance().getContext().getSharedPreferences(getName(), Context.MODE_PRIVATE);
         mOperator = new PreferenceOperator(mSharedPreferences);
     }
 
