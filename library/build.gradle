@@ -3,7 +3,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 // This is the library version used when deploying the artifact
-version = "1.0.9"
+version = "1.0.10"
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
@@ -35,11 +35,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:26.+'
-    testCompile 'junit:junit:4.12'
+
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.lrchao:lrchao-views:1.0.33'
     compile 'com.lrchao:lrchao-utils:1.0.12'
@@ -109,7 +105,7 @@ bintray {
     pkg {
 
         repo = "maven"
-        name = "LrchaoFakeJob"	//发布到JCenter上的项目名字
+        name = "LrchaoFakeJob"    //发布到JCenter上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

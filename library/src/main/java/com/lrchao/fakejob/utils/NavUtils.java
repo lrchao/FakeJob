@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.lrchao.fakejob.JobApp;
 import com.lrchao.fakejob.constant.BundleKey;
 import com.lrchao.fakejob.constant.SharedPreferenceKey;
 import com.lrchao.fakejob.manager.shared_preference.CommonSharedPreference;
@@ -68,10 +67,7 @@ public final class NavUtils {
      */
     private void startActivity(Context context, Intent intent) {
         if (context != null) {
-            if (context == JobApp.getInstance().getContext()) {
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            }
-
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             checkNeedLogin(context, intent);
             context.startActivity(intent);
         }
