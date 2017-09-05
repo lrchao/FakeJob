@@ -22,7 +22,7 @@
                 android:id="@+id/layout_not_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/blue_1565c0"
+                android:background="@color/white"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingBottom="26dp"
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
                     android:text="@string/login_register"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_content"
                     android:textSize="18sp"/>
 
 
@@ -52,7 +52,7 @@
                 android:id="@+id/layout_already_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/blue_1565c0"
+                android:background="@color/white"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingBottom="26dp"
@@ -70,11 +70,122 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="18dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_content"
                     android:textSize="18sp"/>
 
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="@color/gray_bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="14dp"
+                android:text="兼职报名记录"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_line"/>
+
+            <LinearLayout android:id="@+id/ll_yibaoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/home_me_apply"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="已报名"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/ll_jinxingzhong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/home_me_processing"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="进行中"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/ll_yiwancheng"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/home_me_eval"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="已完成"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/ll_quanbu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/home_me_finish"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="全部"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="@color/gray_bg"/>
 
             <com.lrchao.views.itemview.ItemGroupLayout
                 android:id="@+id/layout_group"
@@ -86,13 +197,13 @@
                 android:id="@+id/tv_logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:padding="14dp"
-                android:gravity="center"
                 android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg_gray_10"
+                android:gravity="center"
+                android:padding="14dp"
                 android:text="@string/logout"
                 android:textColor="@color/white"
-                android:background="@drawable/btn_bg_gray_10"
                 android:textSize="20sp"/>
 
 

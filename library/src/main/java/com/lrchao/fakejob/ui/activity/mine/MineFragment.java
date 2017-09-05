@@ -24,7 +24,7 @@ import com.lrchao.views.itemview.ItemGroupLayout;
  */
 
 public class MineFragment extends NetworkFragment implements
-        MineContract.View {
+        MineContract.View, View.OnClickListener {
 
     private MinePresenter mPresenter;
 
@@ -51,6 +51,11 @@ public class MineFragment extends NetworkFragment implements
 
     @Override
     protected void initView(View parentView) {
+
+        parentView.findViewById(R.id.ll_yibaoming).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_jinxingzhong).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_yiwancheng).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_quanbu).setOnClickListener(this);
 
         mMyCircleImageView = parentView.findViewById(R.id.iv_user_icon);
         mTvUserName = parentView.findViewById(R.id.tv_user_name);
@@ -156,5 +161,21 @@ public class MineFragment extends NetworkFragment implements
     public void bindUserInfoView(String userName, String userIcon) {
         mTvUserName.setText(userName);
         MyImageUtils.displayUserIcon(userIcon, mMyCircleImageView);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.ll_yibaoming ||
+                view.getId() == R.id.ll_jinxingzhong ||
+                view.getId() == R.id.ll_yiwancheng ||
+                view.getId() == R.id.ll_quanbu) {
+
+            if (SessionManager.getInstance().isLogin()) {
+                NavUtils.get().navToCategory(getContext(), "", 1);
+            } else {
+                NavUtils.get().navToLogin(getContext());
+            }
+
+        }
     }
 }
