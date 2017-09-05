@@ -2,6 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
+// This is the library version used when deploying the artifact
+version = "1.0.3"
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
@@ -61,6 +63,8 @@ install {
                 name 'LrchaoFakeJob description'
                 url siteUrl
 
+                artifactId = "job"
+
                 // Set your license
                 licenses {
                     license {
@@ -103,6 +107,7 @@ bintray {
     key = properties.getProperty("bintray.apikey")
     configurations = ['archives']
     pkg {
+
         repo = "maven"
         name = "LrchaoFakeJob"	//发布到JCenter上的项目名字
         websiteUrl = siteUrl
