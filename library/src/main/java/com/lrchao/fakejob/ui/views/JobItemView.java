@@ -86,8 +86,6 @@ public class JobItemView extends LinearLayout implements View.OnClickListener {
 
         mTvPriceUnit.setText(model.getPriceUnit());
 
-        LogUtils.e("id==" + model.getId());
-
         String idStr = String.valueOf(model.getId());
 
         char c = idStr.charAt(idStr.length() - 1);

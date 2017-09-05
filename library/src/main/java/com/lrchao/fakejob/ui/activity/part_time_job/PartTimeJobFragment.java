@@ -7,6 +7,7 @@ import com.lrchao.fakejob.model.json.job.PartTimeJobModel;
 import com.lrchao.fakejob.mvp.BasePresenter;
 import com.lrchao.fakejob.ui.activity.common.PageNetworkFragment;
 import com.lrchao.fakejob.ui.views.PartTimeJobItemView;
+import com.lrchao.fakejob.utils.NavUtils;
 import com.lrchao.views.itemview.ItemGroupLayout;
 
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.List;
  */
 
 public class PartTimeJobFragment extends PageNetworkFragment implements
-        PartTimeJobContract.View {
+        PartTimeJobContract.View, View.OnClickListener {
 
     ItemGroupLayout mItemGroupLayout;
 
@@ -38,6 +39,8 @@ public class PartTimeJobFragment extends PageNetworkFragment implements
     @Override
     protected void initView(View parentView) {
         mItemGroupLayout = parentView.findViewById(R.id.layout_group);
+
+        parentView.findViewById(R.id.ll_diaoyan).setOnClickListener(this);
     }
 
     @Override
@@ -62,5 +65,28 @@ public class PartTimeJobFragment extends PageNetworkFragment implements
         }
         mItemGroupLayout.setBottomLineHeight(2);
         mItemGroupLayout.build();
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        String title = "";
+        if (view.getId() == R.id.ll_diaoyan) {
+            title = "调研";
+        } else if (view.getId() == R.id.ll_tuiguang) {
+            title = "推广";
+        } else if (view.getId() == R.id.ll_liyi) {
+            title = "礼仪";
+        } else if (view.getId() == R.id.ll_peixun) {
+            title = "培训";
+        } else if (view.getId() == R.id.ll_daogou) {
+            title = "导购";
+        } else if (view.getId() == R.id.ll_zhongdiangong) {
+            title = "钟点工";
+        } else if (view.getId() == R.id.ll_other) {
+            title = "其他";
+        }
+
+        NavUtils.get().navToCategory(getContext(), title, 2);
     }
 }
