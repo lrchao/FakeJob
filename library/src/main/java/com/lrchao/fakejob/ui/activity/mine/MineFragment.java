@@ -165,17 +165,19 @@ public class MineFragment extends NetworkFragment implements
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.ll_yibaoming ||
-                view.getId() == R.id.ll_jinxingzhong ||
-                view.getId() == R.id.ll_yiwancheng ||
-                view.getId() == R.id.ll_quanbu) {
+        if (!SessionManager.getInstance().isLogin()) {
+            NavUtils.get().navToLogin(getContext());
+            return;
+        }
 
-            if (SessionManager.getInstance().isLogin()) {
-                NavUtils.get().navToCategory(getContext(), "", 1);
-            } else {
-                NavUtils.get().navToLogin(getContext());
-            }
-
+        if (view.getId() == R.id.ll_yibaoming) {
+            NavUtils.get().navToCategory(getContext(), "已报名", 1);
+        } else if (view.getId() == R.id.ll_jinxingzhong) {
+            NavUtils.get().navToCategory(getContext(), "进行中", 2);
+        } else if (view.getId() == R.id.ll_yiwancheng) {
+            NavUtils.get().navToCategory(getContext(), "已完成", 3);
+        } else if (view.getId() == R.id.ll_quanbu) {
+            NavUtils.get().navToCategory(getContext(), "全部", 4);
         }
     }
 }

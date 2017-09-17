@@ -41,6 +41,12 @@ public class PartTimeJobFragment extends PageNetworkFragment implements
         mItemGroupLayout = parentView.findViewById(R.id.layout_group);
 
         parentView.findViewById(R.id.ll_diaoyan).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_tuiguang).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_liyi).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_peixun).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_daogou).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_zhongdiangong).setOnClickListener(this);
+        parentView.findViewById(R.id.ll_other).setOnClickListener(this);
     }
 
     @Override
