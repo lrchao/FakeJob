@@ -34,12 +34,12 @@
                 android:layout_height="1px"
                 android:background="@color/divider_line"/>
 
-            <ImageView
+            <ImageView android:id="@+id/iv_safa"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:background="@drawable/job_iv_insurance"/>
 
-            <ImageView
+            <ImageView android:id="@+id/iv_lie"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:background="@drawable/job_task_list_default_header_img"/>

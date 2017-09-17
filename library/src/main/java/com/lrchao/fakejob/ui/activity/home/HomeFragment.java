@@ -87,6 +87,10 @@ public class HomeFragment extends SwipeRefreshFragment implements
         categoryAdapter.setOnLrchaoItemClickListener(this);
         mGridLayout.setSpanCount(4);
         mGridLayout.setAdapter(categoryAdapter);
+
+        parentView.findViewById(R.id.iv_safa).setOnClickListener(this);
+
+        parentView.findViewById(R.id.iv_lie).setOnClickListener(this);
     }
 
     private HomeCategoryViewModel bindGridView(@DrawableRes int icon, int text, int id) {
@@ -173,6 +177,10 @@ public class HomeFragment extends SwipeRefreshFragment implements
             mPresenter.navToLocation();
         } else if (R.id.ll_search == view.getId()) {
             mPresenter.navToSearch();
+        } else if (R.id.iv_safa == view.getId()) {
+            mPresenter.navToSave();
+        } else if (R.id.iv_lie == view.getId()) {
+            mPresenter.navToLie();
         }
     }
 }

@@ -30,5 +30,9 @@ public interface HomeContract {
         void navToLocation();
 
         void navToSearch();
+
+        void navToSave();
+
+        void navToLie();
     }
 }
