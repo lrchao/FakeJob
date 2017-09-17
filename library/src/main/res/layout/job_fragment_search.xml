@@ -13,8 +13,8 @@
 
         <LinearLayout
             android:id="@+id/iv_back"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:gravity="center">
 
             <ImageView
@@ -29,14 +29,16 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/job_edittext_background"
             android:hint="请输入您感兴趣的工作"
+            android:paddingRight="10dp"
             android:imeOptions="actionDone"
             android:paddingLeft="5dp"
             android:singleLine="true"
+            android:textColorHint="@color/job_text_hint"
             android:textSize="15dp"/>
 
     </LinearLayout>
@@ -62,7 +64,7 @@
             android:paddingBottom="15dp"
             android:paddingTop="15dp">
 
-            <TextView
+            <TextView android:id="@+id/tv_app"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/job_tag_bg"
@@ -73,7 +75,7 @@
                 android:text="APP"
                 android:textColor="@color/job_colorPrimary"/>
 
-            <TextView
+            <TextView android:id="@+id/tv_online"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -86,7 +88,7 @@
                 android:textColor="@color/job_colorPrimary"/>
 
 
-            <TextView
+            <TextView android:id="@+id/tv_offline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -95,10 +97,10 @@
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp"
                 android:paddingTop="4dp"
-                android:text="线上兼职"
+                android:text="线下兼职"
                 android:textColor="@color/job_colorPrimary"/>
 
-            <TextView
+            <TextView android:id="@+id/tv_kfc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -119,7 +121,7 @@
             android:orientation="horizontal"
             >
 
-            <TextView
+            <TextView android:id="@+id/tv_mdl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/job_tag_bg"
