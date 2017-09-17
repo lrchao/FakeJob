@@ -22,6 +22,7 @@
     <!-- 灰色 -->
     <color name="job_gray_bg">#F2F2F2</color> <!-- 背景灰-->
     <color name="job_gray_divider">#999999</color> <!-- 分割线 -->
+    <color name="job_text_hint">#999999</color>
 
     <!-- 黄色 -->
     <color name="job_yellow_FF4500">#FF4500</color>

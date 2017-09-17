@@ -67,7 +67,7 @@ public class HomeFragment extends SwipeRefreshFragment implements
 
         parentView.findViewById(R.id.iv_location).setOnClickListener(this);
         mTvLocation = parentView.findViewById(R.id.tv_location);
-        mTvLocation.setOnClickListener(this);
+        parentView.findViewById(R.id.layout_location).setOnClickListener(this);
         bindCurrentLocationView();
 
         parentView.findViewById(R.id.ll_search).setOnClickListener(this);
@@ -88,7 +88,7 @@ public class HomeFragment extends SwipeRefreshFragment implements
         mGridLayout.setSpanCount(4);
         mGridLayout.setAdapter(categoryAdapter);
 
-        parentView.findViewById(R.id.iv_safa).setOnClickListener(this);
+        parentView.findViewById(R.id.iv_safe).setOnClickListener(this);
 
         parentView.findViewById(R.id.iv_lie).setOnClickListener(this);
     }
@@ -173,11 +173,11 @@ public class HomeFragment extends SwipeRefreshFragment implements
 
     @Override
     public void onClick(View view) {
-        if (R.id.iv_location == view.getId() || R.id.tv_location == view.getId()) {
+        if (R.id.layout_location == view.getId()) {
             mPresenter.navToLocation();
         } else if (R.id.ll_search == view.getId()) {
             mPresenter.navToSearch();
-        } else if (R.id.iv_safa == view.getId()) {
+        } else if (R.id.iv_safe == view.getId()) {
             mPresenter.navToSave();
         } else if (R.id.iv_lie == view.getId()) {
             mPresenter.navToLie();

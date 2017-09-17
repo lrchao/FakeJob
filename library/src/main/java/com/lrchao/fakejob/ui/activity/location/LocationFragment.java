@@ -36,14 +36,14 @@ import java.util.List;
  * @date 2017/9/3 下午3:50
  */
 
-public class LocationFragment extends BaseFragment {
+public class LocationFragment extends BaseFragment implements View.OnClickListener {
 
-    private ListView sortListView;
-    private SideBar sideBar;
-    private TextView dialog;
-    private SortAdapter adapter;
+    private ListView mSortListView;
+    private SideBar mSideBar;
+    private TextView mTvDialog;
+    private SortAdapter mAdapterSort;
     private EditTextWithDel mEtCityName;
-    private List<CitySortModel> SourceDateList;
+    private List<CitySortModel> mSourceDateList;
 
 
     @Override
@@ -55,41 +55,45 @@ public class LocationFragment extends BaseFragment {
     protected void initView(View parentView) {
 
         mEtCityName = parentView.findViewById(R.id.et_search);
-        sideBar = parentView.findViewById(R.id.sidrbar);
-        dialog = parentView.findViewById(R.id.dialog);
-        sortListView = parentView.findViewById(R.id.country_lvcountry);
+        mSideBar = parentView.findViewById(R.id.sidrbar);
+        mTvDialog = parentView.findViewById(R.id.dialog);
+        mSortListView = parentView.findViewById(R.id.country_lvcountry);
+        parentView.findViewById(R.id.layout_back).setOnClickListener(this);
+
         initDatas();
         initEvents();
         setAdapter();
 
+
+
     }
 
     private void initDatas() {
-        sideBar.setTextView(dialog);
+        mSideBar.setTextView(mTvDialog);
     }
 
     private void initEvents() {
         //设置右侧触摸监听
-        sideBar.setOnTouchingLetterChangedListener(new SideBar.OnTouchingLetterChangedListener() {
+        mSideBar.setOnTouchingLetterChangedListener(new SideBar.OnTouchingLetterChangedListener() {
             @Override
             public void onTouchingLetterChanged(String s) {
                 //该字母首次出现的位置
-                int position = adapter.getPositionForSection(s.charAt(0));
+                int position = mAdapterSort.getPositionForSection(s.charAt(0));
                 if (position != -1) {
-                    sortListView.setSelection(position + 1);
+                    mSortListView.setSelection(position + 1);
                 }
             }
         });
 
         //ListView的点击事件
-        sortListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mSortListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
                 CommonSharedPreference.getsInstance().setValue(SharedPreferenceKey.PREF_CURRENT_LOCATION,
-                        ((CitySortModel) adapter.getItem(position - 1)).getName());
+                        ((CitySortModel) mAdapterSort.getItem(position - 1)).getName());
 
                 finishActivity();
             }
@@ -116,11 +120,11 @@ public class LocationFragment extends BaseFragment {
     }
 
     private void setAdapter() {
-        SourceDateList = filledData(getResources().getStringArray(R.array.job_provinces));
-        Collections.sort(SourceDateList, new PinyinComparator());
-        adapter = new SortAdapter(getContext(), SourceDateList);
-        sortListView.addHeaderView(initHeadView());
-        sortListView.setAdapter(adapter);
+        mSourceDateList = filledData(getResources().getStringArray(R.array.job_provinces));
+        Collections.sort(mSourceDateList, new PinyinComparator());
+        mAdapterSort = new SortAdapter(getContext(), mSourceDateList);
+        mSortListView.addHeaderView(initHeadView());
+        mSortListView.setAdapter(mAdapterSort);
     }
 
     /**
@@ -131,10 +135,10 @@ public class LocationFragment extends BaseFragment {
     private void filterData(String filterStr) {
         List<CitySortModel> mSortList = new ArrayList<>();
         if (TextUtils.isEmpty(filterStr)) {
-            mSortList = SourceDateList;
+            mSortList = mSourceDateList;
         } else {
             mSortList.clear();
-            for (CitySortModel sortModel : SourceDateList) {
+            for (CitySortModel sortModel : mSourceDateList) {
                 String name = sortModel.getName();
                 if (name.toUpperCase().indexOf(filterStr.toString().toUpperCase()) != -1 ||
                         PinyinUtils.getPingYin(name).toUpperCase().startsWith(filterStr.toString().toUpperCase())) {
@@ -144,7 +148,7 @@ public class LocationFragment extends BaseFragment {
         }
         // 根据a-z进行排序
         Collections.sort(mSortList, new PinyinComparator());
-        adapter.updateListView(mSortList);
+        mAdapterSort.updateListView(mSortList);
     }
 
     private List<CitySortModel> filledData(String[] date) {
@@ -165,7 +169,7 @@ public class LocationFragment extends BaseFragment {
             mSortList.add(sortModel);
         }
         Collections.sort(indexString);
-        sideBar.setIndexText(indexString);
+        mSideBar.setIndexText(indexString);
         return mSortList;
     }
 
@@ -175,14 +179,24 @@ public class LocationFragment extends BaseFragment {
         Button currentLocation = headView.findViewById(R.id.btn_city_name);
         currentLocation.setText(MyLocationManager.getInstance().getCurrentLocation());
 
-        GridView mGvCity = headView.findViewById(R.id.gv_hot_city);
+        GridView gvCity = headView.findViewById(R.id.gv_hot_city);
         String[] datas = getResources().getStringArray(R.array.job_city);
         ArrayList<String> cityList = new ArrayList<>();
         for (int i = 0; i < datas.length; i++) {
             cityList.add(datas[i]);
         }
-        CityAdapter adapter = new CityAdapter(getContext(), R.layout.job_gridview_item, cityList);
-        mGvCity.setAdapter(adapter);
+        final CityAdapter adapter = new CityAdapter(getContext(), R.layout.job_gridview_item, cityList);
+        adapter.setOnCityItemClickListener(new CityAdapter.OnCityItemClickListener() {
+            @Override
+            public void onCityItemClick(String name) {
+                CommonSharedPreference.getsInstance().setValue(SharedPreferenceKey.PREF_CURRENT_LOCATION,
+                        name);
+
+                finishActivity();
+            }
+        });
+        gvCity.setAdapter(adapter);
+
         return headView;
     }
 
@@ -194,5 +208,12 @@ public class LocationFragment extends BaseFragment {
 
     public static BaseFragment getInstance() {
         return new LocationFragment();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.layout_back) {
+            finishActivity();
+        }
     }
 }

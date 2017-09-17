@@ -32,7 +32,7 @@ public class CityAdapter extends ArrayAdapter<String> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         LinearLayout layout = null;
         if (convertView == null) {
             layout = (LinearLayout) LayoutInflater.from(getContext()).inflate(resource, null);
@@ -41,6 +41,25 @@ public class CityAdapter extends ArrayAdapter<String> {
         }
         Button name = (Button) layout.findViewById(R.id.tv_city);
         name.setText(getItem(position));
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mOnCityItemClickListener != null) {
+                    mOnCityItemClickListener.onCityItemClick(getItem(position));
+                }
+            }
+        });
         return layout;
+    }
+
+    private OnCityItemClickListener mOnCityItemClickListener;
+
+    public void setOnCityItemClickListener(OnCityItemClickListener onCityItemClickListener) {
+        mOnCityItemClickListener = onCityItemClickListener;
+    }
+
+    public interface OnCityItemClickListener {
+
+        void onCityItemClick(String name);
     }
 }
