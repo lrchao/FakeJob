@@ -38,7 +38,7 @@ public class RegisterPresenter extends BasePresenter<RegisterContract.View> impl
             return;
         }
 
-        if (!password.equals(confirmPassword)) {
+        if (!password.toString().equals(confirmPassword.toString())) {
             getMvpView().showToast("两次密码不一致");
             return;
         }
