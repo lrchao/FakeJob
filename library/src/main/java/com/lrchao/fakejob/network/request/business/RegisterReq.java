@@ -36,7 +36,7 @@ public class RegisterReq extends DialogRequest<LoginModel> {
 
     @Override
     protected String getUrlPath() {
-        return "fake/wall/v1.0/home-register.json";
+        return "fake/wall/v1.0/user-register.json";
     }
 
     @Override
